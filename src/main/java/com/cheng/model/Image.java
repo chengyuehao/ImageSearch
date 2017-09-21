@@ -52,7 +52,7 @@ public class Image {
     }
 
     @Override
-    public String toString() {
+    public String  toString() {
         return "Image{" +
                 "id=" + id +
                 ", name='" + name + '\'' +

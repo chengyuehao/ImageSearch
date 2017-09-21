@@ -13,11 +13,11 @@
         from image
     </select>
 
-    <select id="selectImagesByVid" resultMap="baseMap">
+<!--    <select id="selectImagesByVid" resultMap="baseMap">
         select id,name,url,status,vid
         from image
         where vid=#{vid}
-    </select>
+    </select>-->
 
     <insert id="insertImage" parameterType="com.cheng.model.Image" useGeneratedKeys="true" keyProperty="id">
         insert into image(name,url,status,vid)
