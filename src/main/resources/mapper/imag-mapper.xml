@@ -3,6 +3,25 @@
 <mapper namespace="com.cheng.mapping.ImageMapper">
     <resultMap id="baseMap" type="com.cheng.model.Image">
         <id column="id" property="id"/>
-        <result column=""
+        <result column="name" property="name"/>
+        <result column="url" property="url"/>
+        <result column="status" property="status"/>
+        <result column="vid" property="vid"/>
     </resultMap>
+    <select id="selectImages" resultMap="baseMap">
+        select id,name,url,status,vid
+        from image
+    </select>
+
+    <select id="selectImagesByVid" resultMap="baseMap">
+        select id,name,url,status,vid
+        from image
+        where vid=#{vid}
+    </select>
+
+    <insert id="insertImage" parameterType="com.cheng.model.Image" useGeneratedKeys="true" keyProperty="id">
+        insert into image(name,url,status,vid)
+        values(#{name},#{url},#{status},#{vid})
+    </insert>
+
 </mapper>

@@ -50,4 +50,15 @@ public class Image {
     public void setVid(int vid) {
         this.vid = vid;
     }
+
+    @Override
+    public String toString() {
+        return "Image{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", url='" + url + '\'' +
+                ", status=" + status +
+                ", vid=" + vid +
+                '}';
+    }
 }
